@@ -1,0 +1,15 @@
+{
+  "name": "express-crash-2024",
+  "version": "1.0.0",
+  "description": "nodejs express crash course code",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "node --watch --env-file=.env server"
+  },
+  "author": "Justin Edwards",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
