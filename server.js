@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import posts from './routes/posts.js';
+import logger from './middleware/logger.js';
 const port = process.env.PORT || 8000;
 
 const app = express();
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 // takes care of form data (x-www-form-urlencoded)
 app.use(express.urlencoded({ extended: false }));
+app.use(logger);
 
 // setup static folder
 // app.use(express.static(path.join(__dirname, 'public')));

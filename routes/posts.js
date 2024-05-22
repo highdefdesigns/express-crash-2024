@@ -10,11 +10,11 @@ let posts = [
 // get all posts
 router.get('/', (req, res) => {
   const limit = parseInt(req.query.limit);
-
   //   get a limit on how many posts shown
   if (!isNaN(limit) && limit > 0) {
     return res.status(200).json(posts.slice(0, limit));
   }
+
   res.status(200).json(posts);
 });
 
