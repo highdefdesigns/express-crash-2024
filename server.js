@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import colors from 'colors';
 import posts from './routes/posts.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
@@ -26,4 +27,6 @@ app.use('/api/posts', posts);
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, () =>
+  console.log(`Server is running on port ${port}`.cyan.bold.underline)
+);
